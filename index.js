@@ -17,7 +17,8 @@ app.get("/", (req, res) => res.render('index', {
 app.get("/create", (req, res) => res.render('create'));
 app.post("/create", (req, res) => {
     arr.push(req.body.title);
-    res.render('index', {arr: arr});
+    res.redirect("/");
+    // res.render('index', {arr: arr});
 });
 
 app.listen(3000, () => console.log('app listening 3000'));
